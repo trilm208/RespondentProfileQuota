@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	 xmlns:dxGrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v16.2"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="RespondentProfileQuota.ProjectListPage"
+	Title="Dự án">
+	<dxGrid:GridControl 
+      x:Name="gProjects"  
+      RowHeight="60"
+	  RowTap="OnSelectedProject"
+      IsReadOnly="True"
+      >
+  
+	    <dxGrid:GridControl.Columns>
+	    	<dxGrid:TextColumn FieldName="ProjectNo" Caption="Mã dự án" Width="100"/>
+	        <dxGrid:TextColumn FieldName="ProjectName" Caption="Tên dự án"  />     
+	     </dxGrid:GridControl.Columns>
+    
+   
+  </dxGrid:GridControl>
+</ContentPage>

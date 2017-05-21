@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:dxGrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v16.2"
+	xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+	x:Class="RespondentProfileQuota.QuotaControlPage" 
+	Title="Quota">
+	<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+		<StackLayout Orientation="Horizontal"  Grid.Row="0" Grid.Column="0">
+		   	<controls:BindableRadioGroup x:Name="groupOptions" Orientation="Horizontal"   >
+					<controls:CustomRadioButton x:Name="rRercuit" WidthRequest="120" FontSize="11" Text="Field Tier"   ></controls:CustomRadioButton>
+					<controls:CustomRadioButton x:Name="rCLTRercuit" WidthRequest="120" FontSize="11" Text="Val. Tier"   ></controls:CustomRadioButton>
+					<controls:CustomRadioButton x:Name="rQC" WidthRequest="120" FontSize="11" Text="QC Tier"></controls:CustomRadioButton>
+				    <controls:CustomRadioButton x:Name="rInterview" WidthRequest="120" FontSize="11" Text="Pro.Test Tier" ></controls:CustomRadioButton>
+	   		 </controls:BindableRadioGroup>
+		</StackLayout>
+
+      	<dxGrid:GridControl Grid.Row="1" Grid.Column="0"
+		      x:Name="gData"  
+		      RowHeight="80"	IsReadOnly="true"
+				AllowSort="false"
+				AllowGroup="false"
+		      >
+		  
+			    <dxGrid:GridControl.Columns>
+				
+					<dxGrid:TextColumn x:Name="colCity" Width="80" FieldName="City" Caption="City"/>
+			    	<dxGrid:TextColumn FieldName="Caption" Caption="Điều kiện"/>
+					<dxGrid:TextColumn FieldName="MinValue" Width="60" Caption="Min"  />
+				    <dxGrid:TextColumn FieldName="MaxValue" Width="65" Caption="Max" />
+					<dxGrid:TextColumn FieldName="CurrentCount" Width="70" Caption="Thực tế"/>
+					<dxGrid:TextColumn FieldName="CurrentStatus" Width="120" Caption="Trạng thái" />
+				
+			     </dxGrid:GridControl.Columns>
+		 	 </dxGrid:GridControl>
+    </Grid>
+
+	
+
+	
+
+</ContentPage>

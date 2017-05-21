@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:m16="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls.Checkbox"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="RespondentProfileQuota.LoginPage" Title="Đăng nhập">
+  
+  <StackLayout Spacing="30" x:Name="layout" Orientation="Vertical" Padding="20" >
+    
+    <BoxView HeightRequest="10" />
+ 
+    <StackLayout Spacing="30" x:Name="layoutx" Orientation="Vertical" Padding="20">     
+		
+      <Frame BackgroundColor="#8F043055" HasShadow="False">
+          <StackLayout
+          Orientation="Vertical"
+          Spacing="10">          
+            <Entry  x:Name="txtUsername" HeightRequest="40" TextColor="Black" VerticalOptions="Fill" Placeholder="Nhập tên tài khoản" />       
+            <Entry  x:Name="txtPassword" HeightRequest="40" TextColor="Black" VerticalOptions="Fill" Placeholder="Nhập mật khẩu" IsPassword="True" />          
+     	 </StackLayout>
+      </Frame>      
+      <StackLayout
+          Orientation="Horizontal" HorizontalOptions ="FillAndExpand"
+          Spacing="10">    
+              <m16:Checkbox             
+                          x:Name="chkRememberPassword" Checked="True"
+                           WidthRequest="55"  VerticalOptions="Start" HorizontalOptions="Start"
+                            />   			
+             <Label TextColor="Black" FontSize = "20" Text="Nhớ mật khẩu"  />
+      </StackLayout>
+    <Button 
+        Text="Đăng nhập"
+        TextColor="White"
+        FontSize="20"
+        FontAttributes="Bold"
+        BackgroundColor="#f49131" 
+        Clicked="btnLogin_Clicked" 
+        HorizontalOptions="FillAndExpand" /> 
+</StackLayout>
+		</StackLayout>
+	</ContentPage>

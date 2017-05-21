@@ -1,0 +1,6 @@
+namespace RespondentProfileQuota
+{
+    class UI
+    {
+    }
+}

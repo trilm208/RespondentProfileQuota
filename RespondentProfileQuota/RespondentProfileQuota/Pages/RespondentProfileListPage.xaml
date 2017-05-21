@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:dxGrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v16.2"
+	x:Class="RespondentProfileQuota.RespondentProfileListPage" 
+	Title="Danh sách chờ">
+	<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+      	 <Grid>
+		        <Grid.RowDefinitions>
+		           
+		        <RowDefinition Height="*"/>
+		        </Grid.RowDefinitions>
+		        <Grid.ColumnDefinitions>
+					<ColumnDefinition Width="120"/>
+					<ColumnDefinition Width="120"/>
+		            <ColumnDefinition Width="*"/>					
+					<ColumnDefinition Width="120"/>
+		        </Grid.ColumnDefinitions>
+
+				<Button Text="Xem lại" Clicked="btnView_Clicked" Grid.Row="0" Grid.Column="0" TextColor="White" FontSize="17" FontAttributes="Bold" BackgroundColor="#f49131"></Button>
+				<Button Text="Làm mới" Clicked="btnRefresh_Clicked" Grid.Row="0" Grid.Column="1" TextColor="White" FontSize="17" FontAttributes="Bold" BackgroundColor="#f49131"></Button>
+				<Label x:Name="lblProjectName" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" TextColor="Green" FontSize="20" FontAttributes="Bold"  ></Label>
+				<Button x:Name="btnNew" Clicked="btnNew_Clicked" Text="Thêm" Grid.Row="0" Grid.Column="3" TextColor="White" FontSize="17" FontAttributes="Bold" BackgroundColor="#f49131"></Button>
+
+   		 </Grid>
+		
+      	<dxGrid:GridControl Grid.Row="1" Grid.Column="0"
+		      x:Name="gData" 
+			  RowHeight="80"
+			  RowTap="OnSelectedRespondent"
+				IsReadOnly="true"
+				AllowSort="false"
+				AllowGroup="false"
+		     >
+		  
+			    <dxGrid:GridControl.Columns>
+			    	<dxGrid:TextColumn FieldName="GreenID" Caption="Mã xanh" Width="70"/>
+					<dxGrid:TextColumn FieldName="RespondentFullName" Caption="Họ và tên"/>
+					<dxGrid:TextColumn FieldName="FullName" Caption="Recruit" />
+					<dxGrid:TextColumn FieldName="RespondentStatus" Caption=" FW-Status" />	
+
+			     </dxGrid:GridControl.Columns>
+		 	 </dxGrid:GridControl>
+    </Grid>
+
+</ContentPage>

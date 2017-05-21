@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:RespondentProfileQuota;assembly=RespondentProfileQuota"
+	Padding="0,5,0,0"
+	x:Class="RespondentProfileQuota.RespondentDetailPage" Title="Thông tin chi tiết">
+
+	<StackLayout>
+
+			 <Grid>
+		        <Grid.RowDefinitions>
+		           
+		        <RowDefinition Height="50"/>
+		        </Grid.RowDefinitions>
+		        <Grid.ColumnDefinitions>
+					<ColumnDefinition Width="100"/>
+		            <ColumnDefinition Width="*"/>					
+					<ColumnDefinition Width="100"/>
+		        </Grid.ColumnDefinitions>
+
+				<Button  Text="ICMA" WidthRequest="100" Grid.Row="0" Grid.Column="0" Clicked="btnRunICMA_Clicked" TextColor="White" FontSize="20" FontAttributes="Bold" BackgroundColor="#f49131"   HorizontalOptions="End" /> 
+			    <Button  Text="Save" WidthRequest="100" Grid.Row="0" Grid.Column="2" Clicked="btnSave_Clicked" TextColor="White" FontSize="20" FontAttributes="Bold" BackgroundColor="#f49131"   HorizontalOptions="Start" /> 
+								 		
+   		 </Grid>
+		
+					
+		
+		<ScrollView>
+
+				<StackLayout Spacing="5" x:Name="layout" Orientation="Vertical">  
+				   	   <StackLayout Spacing="5" x:Name="layoutx" Orientation="Vertical">          
+							  <StackLayout
+						          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Mã xanh" VerticalOptions="Start" HorizontalOptions="Start" />
+						             <Entry  x:Name="txtGreenID"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >					
+									 </Entry>	
+						      </StackLayout> 
+						    
+						      <StackLayout
+						          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Họ và tên" VerticalOptions="Start" HorizontalOptions="Start" />
+						             <Entry  x:Name="txtFullName"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>   			
+						      </StackLayout> 
+
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Giới tính" VerticalOptions="Start" HorizontalOptions="Start" />
+									 <Picker x:Name="txtGender"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+								   
+								    </Picker> 		         		
+						      </StackLayout> 
+
+							<StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Năm sinh" VerticalOptions="Start" HorizontalOptions="Start" />
+									 <Picker x:Name="txtYoB"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >		     
+								    </Picker> 		         		
+						     </StackLayout> 
+							
+				
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Điện thoại" VerticalOptions="Start" HorizontalOptions="Start" />
+						             <Entry  x:Name="txtTelephone"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+						
+									 </Entry>			
+						      </StackLayout>
+
+				
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Quận" VerticalOptions="Start" HorizontalOptions="Start" />
+						           	 <Picker x:Name="txtDistrict"   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SelectedIndexChanged="txtDistrict_SelectedIndexChanged"> </Picker> 			
+						      </StackLayout>
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Phường" VerticalOptions="Start" HorizontalOptions="Start" />
+						           <Picker x:Name="txtWard"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" > </Picker> 			
+						      </StackLayout>
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Đường" VerticalOptions="Start" HorizontalOptions="Start" />
+						             <Entry  x:Name="txtStreet"   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>   			
+						      </StackLayout>
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Số nhà" VerticalOptions="Start" HorizontalOptions="Start" />
+						             <Entry  x:Name="txtAddress"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>   			
+						      </StackLayout>
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Email" VerticalOptions="Start" HorizontalOptions="Start" />
+						             <Entry  x:Name="txtEmail"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Text=""/>   			
+						      </StackLayout>
+
+							 <StackLayout 
+							          Orientation="Vertical" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Phỏng vấn viên"  />
+									 <StackLayout Orientation="Horizontal" HorizontalOptions ="FillAndExpand"> <Picker x:Name="cbRecuit"  HorizontalOptions="FillAndExpand"/>   </StackLayout>
+						            			
+						      </StackLayout>
+
+							
+							<StackLayout x:Name="layoutQuota" Orientation="Vertical" HorizontalOptions ="FillAndExpand">
+									
+
+							</StackLayout>
+
+							 <StackLayout
+							          Orientation="Horizontal" HorizontalOptions ="FillAndExpand">    
+									 <Label WidthRequest="100" TextColor="Black" FontSize = "15" Text="Trạng thái" VerticalOptions="Start" HorizontalOptions="Start" />
+							
+									 <Picker x:Name="txtStatus" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+								      <Picker.Items>
+								        <x:String>Ok</x:String>
+								        <x:String>Extra</x:String>
+										<x:String>Checking</x:String>
+								      </Picker.Items>
+									<Picker.SelectedIndex>0</Picker.SelectedIndex>
+								 </Picker> 	
+						      </StackLayout>
+							
+						<StackLayout>
+									
+				</StackLayout>
+							 
+				  		  </StackLayout>
+				 </StackLayout>
+
+
+	
+    </ScrollView>
+
+	</StackLayout>
+	
+
+</ContentPage>
